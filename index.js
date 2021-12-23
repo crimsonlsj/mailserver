@@ -29,10 +29,10 @@ const main = async ({title, category, contents}) => {
     // send mail with defined transport object
     let info = await transporter.sendMail({
       from: `"메이크 프로덕션 가격 요청서" <${process.env.NODEMAILER_USER}>`,
-      to: 'polarislsj@gmail.com',
+      to: 'evia_a@naver.com',
       subject: title,
       text: category,
-      html: `<b>${contents}</b>`,
+      html: `${contents}`,
     });
   
     console.log('Message sent: %s', info.messageId);
