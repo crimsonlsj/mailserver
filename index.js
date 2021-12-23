@@ -1,8 +1,10 @@
 const nodemailer = require('nodemailer');
 const express = require('express')
 var bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express()
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false}));
 const port = 3000
 
